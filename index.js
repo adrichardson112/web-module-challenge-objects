@@ -1,7 +1,17 @@
 ///////////////Menu Items (MVP)///////////////////
 
 const latte = {name: "Cafe Latte", price: 4, category: "Drinks"};
-const burger = {name: "Burger", price: 18, category: "Lunch"};
+const burger = {name: "Burger", price: 18, category: "Lunch", 
+ discount(special) {
+   let cost; 
+   if(special = "teacher", "student");
+   cost = this.price * 0.75; 
+   if(special = "public");
+   cost = this.price * 0.90;
+
+   return cost;
+ }
+};
 const breakfastBurrito = {name: "Breakfast Burrito", price: 16, category:"Breakfast"};
 
 /* Task 1a: write a function to return more menu items with the same format as the items above. */
@@ -26,9 +36,8 @@ Your method should accept:
 and should return a number. 
 
 For example, burger.discount("teacher") would return 13.5 and burger.discount("public") would return 16.2*/
-const burger = {name: "Burger", price: 18, category: "Lunch"};
 
-
+console.log(burger.discount("teacher"));
 
 
 ///////////////Reviews (MVP)///////////////////
