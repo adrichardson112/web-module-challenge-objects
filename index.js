@@ -107,15 +107,15 @@ reviews.push(newobject2);
 
 /* Task 5: Add the following feedback to Reyna's rating - "this place is chill with really cool people, great for getting work done on weekdays"*/
 
-function addtoReyna(reviewsarray, idperson, correctedfeedback) {
-  for (let i =0; i < reviews.length; i++){
-    if(reviews[i].feedback === idperson){
-      reviewsarray[i].feedback === correctedfeedback;
+function changeWrongData(reviewsArray, idPerson, correctedFeedback) {
+  for (let i =0; i < reviewsArray.length; i++){
+    if(reviewsArray[i].feedback === idPerson){
+      reviewsarray[i].feedback === correctedFeedback;
     }
   }
 
 }
-addtoReyna(reviews, "Reyna", "This place is chill with really cool people,great for getting things done on weekdays");
+changeWrongData(reviews, "Reyna", "This place is chill with really cool people,great for getting things done on weekdays");
 console.log(reviews);
 
 /*  Task 6: Write a function to return a review based on the index of the review in the array.
@@ -132,7 +132,7 @@ and should return a string in the format `{name} gave the restaurant a {rating},
 */
 function getReviewByIndex(reviews, index) {
   reviews[index];
-  console.log(index);
+  console.log(reviews[index]);
 }
 console.log(getReviewByIndex(reviews, 0));
 
@@ -145,9 +145,10 @@ and should return a string in the format `name} gave the restaurant a {rating}, 
 
 For example, if getLastReview is invoked passing the reviews array it will return `Reyna gave the restaurant a 3.5 star review and their feedback was: "this place is chill with really cool people, great for getting work done on weekdays"`.
 */
-function getLastReview(/* code here */) {
-  /* code here */
+function getLastReview(reviews) {
+  return `${reviews.name} gave the restaurant a ${reviews.raiting}, and their feedback was: ${reviews.feedback}`;
 }
+console.log(getLastReview(reviews));
 
 ///////////////🍔☕️🍽 STRETCH🍔☕️🍽////////////////////
 
